@@ -7,7 +7,7 @@ var dargs = require('dargs'),
     through = require('through2'),
     which = require('which');
 
-function gulpCsscss(options) {
+module.exports = function gulpCsscss(options) {
   options = options || {};
 
   var passedArgs = dargs(options, ['bundleExec']);
@@ -112,6 +112,4 @@ function gulpCsscss(options) {
       });
     });
   });
-}
-
-module.exports = gulpCsscss;
+};
