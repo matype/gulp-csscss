@@ -21,7 +21,7 @@
     "url": "https://github.com/morishitter/gulp-csscss/issues"
   },
   "homepage": "https://github.com/morishitter/gulp-csscss",
-  "devDependencies": {
+  "dependencies": {
     "gulp-util": "~2.2.14",
     "through2": "~0.4.1",
     "win-spawn": "~2.0.0",
