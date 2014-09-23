@@ -5,7 +5,7 @@ gulp plugin that runs [csscss](http://zmoazeni.github.io/csscss/), a CSS redunda
 
 To install the csscss gem run `gem install csscss` command, this will grab the latest version.
 
-## Instration
+## Installation
 Install with npm
 
 ```
