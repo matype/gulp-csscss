@@ -15,13 +15,12 @@ npm install gulp-csscss --save-dev
 ## Example
 
 ```js
-var gulp = require('gulp'),
-    csscss = require('gulp-csscss');
+var gulp = require('gulp');
+var csscss = require('gulp-csscss');
 
 gulp.task('default', function() {
   gulp.src('src/style.css')
     .pipe(csscss())
-    .pipe(gulp.dest('dist'));
 });
 ```
 
