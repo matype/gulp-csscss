@@ -51,7 +51,7 @@ module.exports = function gulpCsscss(options) {
                 command = "bundle exec csscss"
             }
 
-            var child = exec(command + ' "' + file.path + '"', function(err, stdout, stderr) {
+            var child = exec(command + ' "' + tempFile + '"', function(err, stdout, stderr) {
                 if (!err) {
                     console.log("Result of running CSSCSS:");
                     console.log(stdout);
