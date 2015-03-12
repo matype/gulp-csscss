@@ -1,6 +1,6 @@
 {
   "name": "gulp-csscss",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "gulp plugin for running csscss",
   "main": "index.js",
   "scripts": {
