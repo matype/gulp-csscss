@@ -11,7 +11,7 @@ var exec = require('child_process').exec;
 module.exports = function gulpCsscss(options) {
     options = options || {};
 
-    var passedArgs = dargs(options, ['bundleExec']);
+    var passedArgs = dargs(options, {excludes: ['bundleExec']});
     var bundleExec = options.bundleExec;
 
     try {
