@@ -2,7 +2,6 @@
 'use strict';
 
 var dargs = require('dargs');
-var fs = require('fs');
 var gutil = require('gulp-util');
 var path = require('path');
 var tempWrite = require('temp-write');
