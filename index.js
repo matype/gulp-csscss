@@ -50,7 +50,7 @@ module.exports = function gulpCsscss(options) {
 
             if (bundleExec) {
                 args.unshift('bundle', 'exec');
-                command = "bundle exec csscss"
+                command = "bundle exec csscss";
             }
 
             var child = exec(command + ' "' + tempFile + '"', function(err, stdout, stderr) {
