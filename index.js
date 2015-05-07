@@ -1,3 +1,6 @@
+/*jshint node:true */
+'use strict';
+
 var dargs = require('dargs');
 var fs = require('fs');
 var gutil = require('gulp-util');
