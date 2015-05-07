@@ -9,18 +9,14 @@ var through = require('through2');
 var which = require('which');
 var exec = require('child_process').exec;
 
-
 module.exports = function gulpCsscss(options) {
-    options = options || {};
-
-    var passedArgs = dargs(options, {excludes: ['bundleExec']});
-    var bundleExec = options.bundleExec;
-
     try {
         which.sync('csscss');
     } catch (err) {
         throw new gutil.PluginError('gulp-csscss', 'You need to have Ruby and CSSCSS installed and in your PATH for this task to work.');
     }
+
+    options = options || {};
 
     return through.obj(function (file, enc, cb) {
         var self = this;
@@ -42,18 +38,17 @@ module.exports = function gulpCsscss(options) {
                 return cb();
             }
 
-            var args = [
-                file.path
-            ].concat(passedArgs);
-
             var command = 'csscss';
 
-            if (bundleExec) {
-                args.unshift('bundle', 'exec');
+            if (options.bundleExec) {
                 command = 'bundle exec csscss';
             }
 
-            var child = exec(command + ' "' + tempFile + '"', function(err, stdout, stderr) {
+            var passedArgs = dargs(options, {excludes: ['bundleExec']});
+
+            command = command + ' ' + passedArgs.join(' ') + ' "' + tempFile + '"';
+
+            var child = exec(command, function(err, stdout, stderr) {
                 if (!err) {
                     console.log('Result of running CSSCSS:');
                     console.log(stdout);
