@@ -46,16 +46,16 @@ module.exports = function gulpCsscss(options) {
                 file.path
             ].concat(passedArgs);
 
-            var command = "csscss";
+            var command = 'csscss';
 
             if (bundleExec) {
                 args.unshift('bundle', 'exec');
-                command = "bundle exec csscss";
+                command = 'bundle exec csscss';
             }
 
             var child = exec(command + ' "' + tempFile + '"', function(err, stdout, stderr) {
                 if (!err) {
-                    console.log("Result of running CSSCSS:");
+                    console.log('Result of running CSSCSS:');
                     console.log(stdout);
                 } else {
                     console.log(err);
