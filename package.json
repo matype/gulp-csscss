@@ -25,7 +25,7 @@
     "gulp-util": "~2.2.14",
     "through2": "~0.4.1",
     "win-spawn": "~2.0.0",
-    "dargs": "~0.1.0",
+    "dargs": "~4.0.0",
     "temp-write": "~0.2.0",
     "which": "~1.0.5",
     "mocha": "~1.17.1"
